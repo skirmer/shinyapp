@@ -8,17 +8,4 @@ output: html_document
 
 I'm using this page as a placeholder for a shiny app I'm planning - come back soon!
 
-
-[First attempt!](/firstapp/app.R)
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+[Find my trial and error at shinyapps.io](https://skirmer.shinyapps.io/firstapp/)
