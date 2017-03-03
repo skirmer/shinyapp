@@ -9,7 +9,7 @@ output: html_document
 I'm using this page as a placeholder for a shiny app I'm planning - come back soon!
 
 
-[First attempt!](experiment.R)
+[First attempt!](/firstapp/app.R)
 
 ```{r}
 summary(cars)
