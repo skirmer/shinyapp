@@ -1,11 +1,12 @@
 ---
-title: "Home"
+title: "Hello"
 author: "S. Kirmer"
-date: "March 3, 2017"
 output: html_document
 ---
 
+Find me and my work online:
 
-I'm using this page as a placeholder for a shiny app I'm planning - come back soon!
-
-[Find my trial and error at shinyapps.io](https://skirmer.shinyapps.io/firstapp/)
+* [Shiny App in Progress (D4D)](https://skirmer.shinyapps.io/firstapp/)  
+* [Website](http://www.stephaniekirmer.com)
+* [Kaggle.com](https://www.kaggle.com/skirmer)
+* [LinkedIn](https://www.linkedin.com/in/skirmer)
