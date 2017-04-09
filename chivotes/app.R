@@ -17,6 +17,7 @@ library(shinythemes)
 library(rsconnect)
 library(ggvis)
 library(plotly)
+library(lubridate)
 
 df <- read.csv("https://query.data.world/s/bqziq63nd9vdt5e7ph3htop6c",header=T, stringsAsFactors=FALSE)
 
@@ -33,10 +34,12 @@ df$Vote <- ifelse(df$Vote == "AO’Connor", "A", df$Vote)
 df$Vote <- ifelse(df$Vote %in% c("ErvinY","PawarY","SmithY"), "Y", df$Vote)
 df <-dplyr::filter(df, Vote %in% c("Y", "N", "A", "E", "NV", "V"))
 
+df$Date <- as.Date(df$Date, format = '%Y-%m-%d')
+df$Year <- year(df$Date)
 
 
 
-df2 <- unique(df[,c("Alderman","Ward", "Vote", "Date","Record", "Title")])
+df2 <- unique(df[,c("Alderman","Ward", "Vote", "Date","Year","Record", "Title")])
 df2$Ward <- as.numeric(df2$Ward)
 
 server <- function(input, output) {
@@ -62,6 +65,10 @@ server <- function(input, output) {
                                                         data <- dplyr::filter(data, Vote == input$Vote) 
                                                       }
                                                       
+                                                      if(input$Year != "All") {
+                                                        data <- dplyr::filter(data, Year == input$Year) 
+                                                      }
+                                                      
                                                       data}))
 }
 
@@ -84,7 +91,7 @@ ui <- fluidPage(
            selectInput("Alderman",
                        "Alderman:",
                        c("All",  sort(trimws(unique(as.character(df$Alderman))))))),
-    column(3,
+    column(2,
            selectInput("Ward",
                        "Ward:",
                        c("All", sort(trimws(unique(as.character(df$Ward))))))),
@@ -92,8 +99,12 @@ ui <- fluidPage(
            selectInput("Record",
                        "Record:",
                        c("All", sort(trimws(unique(as.character(df$Record))))))),
+    column(2,
+           selectInput("Year",
+                       "Year:",
+                       c("All", sort(trimws(unique(as.character(df$Year))))))),
     
-    column(3,
+    column(2,
            selectInput("Vote",
                        "Vote:",
                        c("All", sort(trimws(unique(as.character(df$Vote)))))))
