@@ -18,11 +18,38 @@ library(plotly)
 
 df <- read.csv("https://query.data.world/s/ebgm9pltjmv22p1w9lmkdx46e",header=T, stringsAsFactors=FALSE)
 df <- dplyr::filter(df, !is.na(recipient_surname))
-
 df$LOBBYIST_NAME <- paste0(df$LOBBYIST_LAST_NAME, ", ", df$LOBBYIST_FIRST_NAME)
 
+# Clean lobbying company names #
+#Save the old name
+df$EMP_NAME_ORIG <- df$EMPLOYER_NAME
+
+# text pre-processing of EMPLOYER_NAME -- these correct for common entry mistakes
+df$EMPLOYER_NAME <- trimws(df$EMPLOYER_NAME, which = "both") #Might want to run this at repeated points
+df$EMPLOYER_NAME <- toupper(df$EMPLOYER_NAME) #make all characters upper case
+df$EMPLOYER_NAME <- gsub(".COM$", "", df$EMPLOYER_NAME) # drop .com if it appears at the end
+df$EMPLOYER_NAME <- removePunctuation(df$EMPLOYER_NAME)
+#Fix a spelling screwup or two
+df$EMPLOYER_NAME <- gsub("PC$", "", df$EMPLOYER_NAME) # drop PC if it appears at the end
+df$EMPLOYER_NAME <- gsub("LTD$", "", df$EMPLOYER_NAME) # drop LTD if it appears at the end
+df$EMPLOYER_NAME <- gsub(" HACIA", "", df$EMPLOYER_NAME) 
+df$EMPLOYER_NAME <- gsub(" ASSOC$", " ASSOCIATION", df$EMPLOYER_NAME) 
+df$EMPLOYER_NAME <- gsub(" BUNEY", " BURNEY", df$EMPLOYER_NAME) 
+
+df$EMPLOYER_NAME <- gsub("AND ITS AFFILIATES|AN ILLINOIS CORPORATION| LLC| INC| LLP| CORPORATE| CORPORATION| CORP", "", df$EMPLOYER_NAME)
+
+df$EMPLOYER_NAME <- trimws(df$EMPLOYER_NAME, which = "both") #Might want to run this at repeated points
+# Remove multiple spaces
+df$EMPLOYER_NAME <- gsub("  ", " ", df$EMPLOYER_NAME)
+
+# Prepare to display
 df2 <- unique(df[,c("Year","LOBBYIST_NAME", "CONTRIBUTION_DATE","RECIPIENT","recipient_surname","AMOUNT", "EMPLOYER_NAME")])
 colnames(df2) <- c("Year", "Lobbyist", "Contribution Date", "Receiving Organization","Alderman", "Amount", "Lobbying Firm")
+
+
+
+
+
 
 server <- function(input, output) {
   #the server - literally what data is going into the plot/viz?
