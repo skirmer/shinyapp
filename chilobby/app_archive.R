@@ -19,10 +19,8 @@ library(plotly)
 df <- read.csv("https://query.data.world/s/ebgm9pltjmv22p1w9lmkdx46e",header=T, stringsAsFactors=FALSE)
 df <- dplyr::filter(df, !is.na(recipient_surname))
 
-df$LOBBYIST_NAME <- paste0(df$LOBBYIST_LAST_NAME, ", ", df$LOBBYIST_FIRST_NAME)
-
-df2 <- unique(df[,c("Year","LOBBYIST_NAME", "CONTRIBUTION_DATE","RECIPIENT","recipient_surname","AMOUNT", "EMPLOYER_NAME")])
-colnames(df2) <- c("Year", "Lobbyist", "Contribution Date", "Receiving Organization","Alderman", "Amount", "Lobbying Firm")
+df2 <- unique(df[,c("Year","CLIENT_NAME", "CONTRIBUTION_DATE", "recipient_surname","AMOUNT", "CLIENT.INDUSTRY")])
+colnames(df2) <- c("Year", "Funder", "Contribution Date", "Alderman", "Amount", "Funder Industry")
 
 server <- function(input, output) {
   #the server - literally what data is going into the plot/viz?
@@ -36,7 +34,7 @@ server <- function(input, output) {
                                                                            aggregate = sum(Amount, na.rm=T),
                                                                            annual_amt = sum(Amount, na.rm=T))
                                                         
-                                                        # Render a barplot
+                                                          # Render a barplot
                                                         plot1 <- ggplot(data2, aes(x=Alderman, y=aggregate, fill=factor(Year), label=annual_amt))+
                                                           theme_bw()+
                                                           theme(axis.text.x = element_text(angle = 45, vjust=.5),
@@ -44,16 +42,16 @@ server <- function(input, output) {
                                                           geom_bar(stat="identity")+
                                                           labs(title = "Donations to Aldermen", x="Alderman", y="Amount of Donations") 
                                                         
-                                                        
+                                                       
                                                         #plot1
                                                         gp <- ggplotly(plot1, tooltip = c("Alderman","factor(Year)", "annual_amt"))
                                                         #gp
                                                         gp %>% layout(margin = list(l=90, r=60, t=60, b=90))
                                                         
                                                       })
-                                                      
+
                                                       if(input$Industry != "All"){
-                                                        data <- dplyr::filter(data, `Lobbying Firm` == input$Industry)
+                                                        data <- dplyr::filter(data, `Funder Industry` == input$Industry)
                                                       }
                                                       
                                                       if(input$Alderman != "All") {
@@ -65,7 +63,7 @@ server <- function(input, output) {
                                                       }
                                                       
                                                       if(input$Funder != "All") {
-                                                        data <- dplyr::filter(data, Lobbyist == input$Funder) 
+                                                        data <- dplyr::filter(data, Funder == input$Funder) 
                                                       }
                                                       
                                                       data}))
@@ -76,16 +74,15 @@ server <- function(input, output) {
 
 ui <- fluidPage(
   theme = shinytheme('lumen'),
-  titlePanel("Exchange Between Aldermen and Lobbyists"),
+  titlePanel("Connections Between Aldermen and Funders Through Lobbying"),
   
-  "This page is part of the Data4Democracy Chicago Lobbying project, and is a collaborative work in progress. 
-  All data comes from the City of Chicago Data Portal. Begin typing in the Lobbying Firm box to browse the companies- you can select more than one.",
+  "This page is part of the Data4Democracy Chicago Lobbying project, and is a collaborative work in progress. (Not all funders have industry classifications yet.) All data comes from the City of Chicago Data Portal. Begin typing in the Funder box to browse the funders- you can select more than one.",
   br(),br(),
   
   "If you'd like to learn more, join us at ", a("data.world/lilianhj/chicago-lobbyists!", 
-                                                href="https://data.world/lilianhj/chicago-lobbyists"),
+                   href="https://data.world/lilianhj/chicago-lobbyists"),
   "If you like this app, you might also enjoy the sister apps ", a("Aldermanic Voting Records",
-                                                                   href="https://skirmer.shinyapps.io/chivotes/"),
+                                                                  href="https://skirmer.shinyapps.io/chivotes/"),
   "and ", a("Lobbyist Connections Network.",
             href="https://nathanielwroblewski.github.io/data-for-democracy-2017/"),
   br(),br(),
@@ -93,16 +90,16 @@ ui <- fluidPage(
                                           href= "https://github.com/skirmer/shinyapp/tree/master/chilobby"), br(),br(),
   
   fluidRow(
-    
+
     column(3,
-           selectizeInput("Industry",
-                          "Lobbying Firm:",
-                          c(Choose='', "All", sort(trimws(unique(as.character(df2$`Lobbying Firm`))))), 
+           selectizeInput("Funder",
+                          "Funder:",
+                          c(Choose='', "All", sort(trimws(unique(as.character(df2$Funder))))), 
                           multiple=TRUE, selected = "All")),
     column(3,
-           selectInput("Funder",
-                       "Lobbyist:",
-                       c("All",  sort(trimws(unique(as.character(df2$Lobbyist))))))),
+           selectInput("Industry",
+                       "Funder Industry:",
+                       c("All",  sort(trimws(unique(as.character(df2$`Funder Industry`))))))),
     column(3,
            selectInput("Alderman",
                        "Alderman:",
@@ -120,7 +117,7 @@ ui <- fluidPage(
   fluidRow(
     DT::dataTableOutput("table")
   )
-  
+
 )
 
 shinyApp(ui = ui, server = server)
