@@ -43,7 +43,7 @@ server <- function(input, output) {
                                                         #plot1
                                                         gp <- ggplotly(plot1)
                                                         #gp
-                                                        gp %>% layout(margin = list(l=60, r=60, t=60, b=200))
+                                                        gp %>% layout(margin = list(l=90, r=60, t=60, b=90))
                                                         
                                                       })
 
@@ -73,7 +73,7 @@ ui <- fluidPage(
   theme = shinytheme('lumen'),
   titlePanel("Connections Between Aldermen and Funders Through Lobbying"),
   
-  "This page is part of the Data4Democracy Chicago Lobbying project. This data comes from the City of Chicago Data Portal.",
+  "This page is part of the Data4Democracy Chicago Lobbying project. This data comes from the City of Chicago Data Portal. Begin typing in the Funder box to browse the funders- you can select more than one.",
   br(),br(),
   
   "Join us at ", a("data.world/lilianhj/chicago-lobbyists!", href="https://data.world/lilianhj/chicago-lobbyists"),
@@ -94,18 +94,20 @@ ui <- fluidPage(
                        c("All", sort(trimws(unique(as.character(df$Year))))))),
     
     column(3,
-           selectInput("Funder",
+           selectizeInput("Funder",
                        "Funder:",
-                       c("All", sort(trimws(unique(as.character(df$CLIENT_NAME)))))))
+                       c(Choose='', "All", sort(trimws(unique(as.character(df$CLIENT_NAME))))), 
+           multiple=TRUE, selected = "All"))
+  )
+  ,
+  fluidRow(
+    plotlyOutput("barplot", height = 500)  
   )
   ,
   fluidRow(
     DT::dataTableOutput("table")
   )
-  ,
-  fluidRow(
-    plotlyOutput("barplot", height = 600)  
-  )
+
 )
 
 shinyApp(ui = ui, server = server)
