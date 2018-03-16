@@ -1,0 +1,511 @@
+---
+title: "Stephanie Kirmer"
+output: 
+  flexdashboard::flex_dashboard:
+    includes:
+        in_header: analytics.html
+    orientation: columns
+    #vertical_layout: scroll
+    theme: yeti
+    navbar:
+      - { icon: "fa-twitter", href: "https://twitter.com/data_stephanie",align: right}
+      - { icon: "fa-github", href: "http://github.com/skirmer",align: right}
+      - { icon: "fa-linkedin", href: "http://linkedin.com/in/skirmer",align: right}
+#runtime: shiny
+
+---
+
+<br>
+Hi! I'm a data scientist in industry, by way of education research. I am deeply interested in sociology, the data science industry (and making it better), R programming, and education. If you're in need of a speaker on one of these topics, let me know! 
+
+Also, I am committed to helping other women get into the data science field, so if you need advice or support, contact me!
+
+##### See what I'm reading on Pocket: http://getpocket.com/@data_stephanie   
+
+<BR>
+
+### {.no-mobile}
+
+### {.mobile}
+**Navigation**
+
+[Data Science/Research](#ds)  /  [Technical Skills](#tech)  /  [Projects](#proj)  /   [Education](#edu)  /  [Presentations/Other](#talk)  /  [Contact](#cont) 
+
+Column {.tabset .tabset-fade}
+-------------------------------------
+<a id="ds"></a>  
+
+### Data Science / Research Experience
+
+<BR>
+
+#### Data Scientist, Uptake
+#### May 2017 - present  
+
+I work in the Rail industry vertical at Uptake, building predictive models to diagnose failures in diesel locomotives. I also build R packages and other software tools to improve our team's efforts in data cleaning, exploratory analysis, and modeling. I regularly work directly with clients, and give internal presentations from time to time about my work and the tools I build. 
+
+Key accomplishments:
+
+* Build and maintain high performing (AUC > .75) predictive models for direct value add to clients  
+* Helped pilot an internal training program for teams to learn about the work of data science, helping areas such as sales better understand the business  
+* Built an R package to manage subject matter expert feedback requests and facilitate improving data labels for modeling  
+* Manage subject matter expert interactions with data scientists for the rail line of business day to day, facilitating strong relationships with customer  
+
+<BR>
+
+***
+
+<BR>
+
+#### Research Analyst, University of Chicago Urban Labs  
+#### October 2015 - April 2017  
+
+Produce complex original analyses using R, SAS, Python, Stata, and other statistical programming interfaces as part of academic research on the efficacy of social programs and interventions. Content area specialist in education, with additional experience in crime, poverty, and health data. Technical skills in regression modeling, causal estimation, and RCT analysis.
+
+Key accomplishments:
+
+* Conduct statistical analysis using multivariate linear modeling, logistic regression modeling, 2-stage least squares models, and more in support of a forthcoming report evaluating the efficacy of a tutoring program.  
+* Supervision of junior staff and interns on analytic projects, including technical training in R and SAS.  
+* Production of complex graphs and GIS visualizations in support of various projects.  
+* Feature engineering and model construction/testing using gradient boosting, tree/forest techniques, and linear and logistic models.  
+* Establishment of team best practices surrounding reproducible research using R and LaTeX, and training staff on using these interfaces.  
+
+<BR>
+
+***
+
+<BR>
+
+#### Data Analyst, University of Chicago Consortium on Chicago School Research (CCSR)  
+#### March 2014 – October 2015   
+
+Liaison between CCSR, UChicago Urban Labs, and Chapin Hall researchers and Chicago Public Schools on data analytics. Provided support and content area expertise on technical data manipulation and querying, legal and student privacy matters, and research study design.
+
+Key accomplishments:
+
+* Filled over three dozen individual data requests annually for researchers, including writing complex SAS/SQL queries from relational database and cleaning/manipulating data  
+* Collaborated with researchers on writing of statements of work/data sharing agreements for 8 research studies  
+* Built web-based system for submitting data requests and constructed workflow to queue and fill requests  
+* Created and maintained first ever data dictionary on CPS data, including comprehensive wiki repository of knowledge about CPS data policies and procedures  
+* Gave 10 presentations annually to research teams on key CPS data issues and procedures   
+
+<BR>
+
+***
+
+<BR>
+
+#### Project Manager, International Programs, DePaul University  
+#### 2010 – 2014   
+
+Research Assistant, International Programs, DePaul University   
+2010   
+
+Conducted research and data analysis on international students and study abroad participant students for DePaul University, producing reports for university leadership. Managed direct reports. Promoted during period of employment.
+
+Key accomplishments: 
+
+* Built first ever Tableau visualization workbooks detailing international student trends and academic outcomes  
+* Coordinated annual international student satisfaction survey with outside vendor, and conducted independent analysis of survey results  
+* Managed study abroad program management database and application system (StudioAbroad platform), including training new staff and faculty on using system  
+
+<BR>
+
+***
+
+<font size = "2">
+Analyst, Thomson Reuters  
+2008 - 2009   
+
+Conducted data analysis with internal, proprietary data analysis system about employee health benefits for corporate clients. 
+
+***
+
+Study Coordinator, Department of Psychiatry, Oregon Health and Science University  
+2008  
+
+Coordinated patient care and data collection and management for OHSU site of investigational trial studying antidepressant (agomelatine) under Dr. Thomas Passmore. 
+
+***
+
+Research Assistant, Oregon Health Fund Board, Oregon Legislature  
+2007-2008  
+
+Provided data and trends on specific areas of shortage among healthcare professionals across Oregon for the Legislature's use in policymaking. 
+
+***
+
+Research Assistant, CareOregon, Inc.  
+2007   
+
+Conducted survey research of disabled and low income Medicare and Medicaid eligible members of CareOregon HMO under Dr. Matthew Carlson.
+
+***
+
+Research Assistant, University of Kansas, Department of Education  
+2005-2006   
+
+Assisted with research on out-of-school time programs across the state under Dr. Nancy Harper.
+
+</font>
+
+<a id="tech"></a>
+
+### Technical Skills
+
+<BR>
+
+#### Languages
+
+* R (very strong)  
+* RMarkdown (very strong)  
+* SQL (very strong) 
+* Python (pandas, scikit-learn) (strong)  
+* LaTeX (strong)
+* HTML/CSS (intermediate)  
+
+#### Software Packages/Applications   
+
+* RStudio  
+* Anaconda, Spyder, Jupyter Notebooks  
+* Git  
+* MySQL Server, PostgreSQL  
+* Tableau  
+* Qualtrics  
+
+#### Analytic Competency Areas  
+
+* Machine learning/predictive models (feature engineering, model tuning, etc), both supervised and unsupervised learning  
+* Data visualization/dashboarding  
+* Text mining/natural language processing  
+* Regression modeling  
+* GIS analysis/mapping  
+* Network analysis (igraph)  
+
+#### Other Competency Areas  
+
+* Elasticsearch (query construction, aggregation)
+* APIs (endpoint development from PostgreSQL data sources)
+* Database management (primarily PostgreSQL, including management of ETL processes)
+* R package development/tool building
+
+<BR>
+
+***
+
+<BR>
+
+#### Professional Development Courses
+
+Datacamp  
+
+* 2017 - Intro to Python for Data Science  
+* 2017 - Intermediate Python for Data Science  
+
+Coursera    
+
+* University of Michigan, 2014 - Questionnaire Design for Social Surveys  
+* University of Michigan, 2015 - Programming for Everybody (Python)   
+* Johns Hopkins University, 2015 - Data Scientist’s Toolbox  
+* Johns Hopkins University, 2015 - R Programming  
+* Johns Hopkins University, 2015 - Getting and Cleaning Data  
+* Johns Hopkins University, 2015 - Statistical Inference  
+* University of Copenhagen, 2016 - Measuring Causal Effects in the Social Sciences  
+* University of Michigan, 2016 - Introduction to Data Science in Python  
+
+Lynda.com   
+
+* 2015 - SQL Essential Training  
+* 2015 - Python 3 Essential Training  
+* 2015 - Foundations of Programming: Fundamentals   
+
+Codecademy   
+
+* 2015 - Python  
+
+SAS Institute, Inc.
+
+* 2014 - Programming 1: Essentials   
+
+<font size="2">
+*University affiliations listed do not indicate course credit, but simply that the instructors were faculty at those institutions. Certificates and proof of completion documents as appropriate available on request.*
+</font>
+
+<a id="proj"></a>
+
+### Projects
+
+<BR>
+
+I enjoy doing data projects in my spare time, and while you can find most of them on kaggle or github, here are direct links to some of my favorites. I've made great advances professionally thanks to the skills I managed to learn via these projects!
+
+<BR>
+
+***
+
+<BR>
+
+#### [Fun with Real Estate Data](https://www.kaggle.com/skirmer/house-prices-advanced-regression-techniques/fun-with-real-estate-data)
+
+This project is a kaggle kernel, in which I walked the reader through the process of cleaning and modeling the data from a real estate prices dataset, using linear modeling, random forests, and gradient boosting (xgboost). My most popular kernel to date! This one also produced respectable competition results, and was chosen for special recognition by the Kaggle admins. (I won a mug!)
+
+Update: Read the interview I did regarding this project (and the other fabulous winners)! 
+http://blog.kaggle.com/2017/03/29/predicting-house-prices-playground-competition-winning-kernels
+
+*Key Skills: machine learning, data cleaning*  
+
+<BR>
+
+***
+
+<BR>
+
+#### [Data for Democracy 2017 Hackathon](https://skirmer.shinyapps.io/chilobby/)
+
+I led a team working on the Chicago Lobbying project, which produced some great output, including this visualization of lobbying and aldermen in Chicago. The project is continuing and building out new functionality. I personally cleaned some of the data underlying, but my biggest contribution was organizing, planning, and leadership. Additional results:
+https://data.world/lilianhj/chicago-lobbyists
+
+Update: Check out a case study by the fine folks at data.world discussing the work that went in to this project: https://medium.com/@sharonbrener/dbf30aeee70b
+
+<BR>
+
+***
+
+<BR>
+
+#### [Exploring Austin, Texas Crime](https://www.kaggle.com/skirmer/exploratory-analysis-of-austin-crime-with-maps)
+
+Among the public datasets available on Kaggle is this one, describing the crimes that have occurred in Austin, TX over a couple of years. This project cleans the data, does some exploratory analysis, and maps various kinds of crime by district
+
+*Key Skills: data cleaning, GIS*
+
+<BR>
+
+***
+
+<BR>
+
+#### [Interruptions at the First Presidential Debate](https://www.kaggle.com/skirmer/d/mrisdal/2016-us-presidential-debates/interruptions-at-the-first-presidential-debate)
+
+My first natural language processing/text mining! This was a lot of fun, because I watched the debate and then was able to examine how well my actual perceptions matched what the data told me.
+
+*Key Skills: NLP, data cleaning*
+
+<BR>
+
+***
+
+<BR>
+
+#### [Manufacturers and the Drugs They Make](https://skirmer.shinyapps.io/firstapp/)
+
+This project is part of my work for Data for Democracy, a great loose association of data scientists working on projects for public benefit in their free time. This was my first Shiny app, and it's always getting a few tweaks and improvements when I have time.
+
+*Key Skills: web coding, data visualization, Shiny*
+
+<BR>
+
+***
+
+<BR>
+
+#### [Medical No-Shows in a Brazilian Hospital](https://www.kaggle.com/skirmer/d/joniarroba/noshowappointments/wip-exploring-data-cleaning-in-medical-no-shows)
+
+What features of patients help providers predict who is at risk of not showing up to appointments? This one provides insights that could be used by the actual hospital that is the source of the data that can be used to improve their patient care.
+
+*Key Skills: data cleaning, modeling, data visualization, machine learning*
+
+<BR>
+
+***
+
+<BR>
+
+#### [Dental Care in the ACA Marketplace](https://www.kaggle.com/skirmer/d/hhs/health-insurance-marketplace/dental-care-in-the-aca-marketplace)
+
+I think this is a good kernel, but it never got traction because the data was not glamorous and the results were not very cheerful. In short, the dental coverage from the ACA is seriously inadequate for population needs, unfortunately.
+
+*Key Skills: data cleaning, GIS*
+
+<BR>
+
+***
+
+<BR>
+
+#### [Tidy Text Mining in Facebook Posts](https://www.kaggle.com/skirmer/d/mchirico/cheltenham-s-facebook-group/tidy-text-mining-in-facebook-posts)
+
+In this project, I used a provided dataset of facebook posts from a community group and analyzed a few details about the content- specifically, how sentiment and gender related to "likes" on the posts.
+
+*Key Skills: NLP, data cleaning, data visualization*
+
+
+<a id="edu"></a>
+
+### Education
+
+<BR>
+
+#### M.A., 2013 - Social and Cultural Foundations of Education (with distinction), DePaul University  
+
+Key coursework areas: Educational policy, educational theory, qualitative research methods  
+[Thesis: Life on Hold: The effect of recession and neoliberalism on millennials’ beliefs about education, economic participation, and adulthood](https://drive.google.com/file/d/0B2f9jtppsXc_ZEpJZFhTOXJoS2s/view?usp=sharing)  
+Director: Dr. Amira Proweller
+
+<BR>
+
+*** 
+
+<BR>
+
+#### M.A., 2008 - Sociology, Portland State University
+
+Key coursework areas: Public health, sociological theory, quantitative research methods, statistics, data analysis  
+Thesis: The Effect of Socioeconomic Status on Mental Health Care Utilization   
+Director: Dr. Melissa Thompson
+
+<BR>
+
+***
+
+<BR>
+
+#### B.A., 2006 - Sociology and European Studies (with honors), University of Kansas
+
+<a id="talk"></a>
+
+### Presentations/Other
+
+<BR>
+
+#### Presentations
+
+Upcoming: 
+
+* May 3, 2018, ODSC East, Boston - R Packages as Team Collaboration Tools (come see me!)  
+
+Past:
+
+* February 22, 2018 - [Panelist on Careers in Data Science, Blue 1647](https://bluelacuna.spaces.nexudus.com/en/events/view/542926510/data-science-101-with-uptake)  
+* February 13, 2018 - How to Build an R Package, [R-Ladies Chicago](https://www.meetup.com/rladies-chicago/)  
+* April 23, 2015 - Attendance in CPS: Who's in school and how do we know?: CCSR Data Group  
+* April 14, 2015 - K-12 Education Data: MoneyThink at University of Chicago  
+* January 15, 2015 - Inside the CPS Dashboard: CCSR Data Group  
+* October 9, 2014 - Understanding SQRP: CCSR Data Group  
+* July 31, 2014 - Life Course of a CPS Data Point: CCSR Data Group  
+* June 26, 2014 - Changes to the Senior Exit Questionnaire: CCSR Data Group  
+* November 20, 2013 - Chicago Women in Publishing Panel, "Generation Who?" http://www.cwip.org/events.html  
+* DePaul Institutional Research and Market Analytics Brown Bag, Spring 2012. "International Students and Study Abroad at DePaul." Presented twice upon request.  
+* Association of International Education Administrators, Washington, DC, 2012.  "Marketing and Communications Professionals in International Education  Offices" with Dr. Gary Gaffield and Blake Cooper http://www.aieaworld.org/  
+* International Humanist Congress, Noordwijk, Netherlands, 2002. "Cross-Generational Organizing and Activism"  
+
+*I am happy to give public presentations on my areas of expertise, including data science (practice, ethics, gender issues, etc), sociology, and education. Feel free to get in touch if you need a speaker.*
+
+<BR>
+
+***
+
+<BR>
+
+#### Research Skills
+
+* Supporting study design process for randomized controlled trials (RCT)  
+* Survey design, testing, and implementation  
+* Qualitative interview research design and implementation  
+* Clinical trials research (biometrics and structured interviews)  
+* Document analysis (both online/new media and traditional documents)  
+* Website tracking and optimization metrics analysis  
+* IRB certified by CITI  
+
+#### Teaching/Communications Skills
+
+* Instructional technology as student and instructor (Blackboard, Desire2Learn, WebCT, various MOOCs)  
+* PeopleSoft student information system/HR data management system (in ETL processes and as front-end user)  
+  
+#### Other Skills
+
+* Experience managing direct reports and training in management techniques/best practices  
+* Experience working with populations (particularly student populations) of diverse race, class, gender, sexual identity, ethnicity, and politics  
+* Experience working with the mentally ill in clinical settings  
+
+#### Honors and Memberships
+
+* [American Statistical Association](http://amstat.org)   
+* [American Educational Research Association (2014-2015)](http://www.aera.net/)  
+* [Phi Beta Kappa, Alpha of Kansas Chapter](http://honors.ku.edu/phi-beta-kappa)  
+* [Phi Beta Delta International Scholars Honor Society, Alpha Pi Chapter](http://www.international.ku.edu/pbd)  
+* [Alpha Kappa Delta Sociology Honor Society, Beta of Kansas Chapter](http://www.sociology.ku.edu/undergraduate/)  
+* [NAFSA: Association of International Educators (2010-2013)](http://www.nafsa.org/)  
+* [American Sociological Association (past)](http://www.asanet.org/)  
+* [DePaul Women's Network (past)](http://resources.depaul.edu/dwn/Pages/default.aspx)  
+* DePaul International Programs Division Staff Appreciation Award 2013  
+* Selected participant in Baskes Roundtable Discussion at the Chicago Humanities Festival with Dr. Jill Lepore, 2010
+
+
+<a id="comm"></a>
+
+### Community Service {.no-mobile}
+
+<BR>
+
+#### Youth Mentor, iMentor, Chicago, IL  
+Fall 2016 - Present  
+I am the mentor for a teen girl interested in a future career in STEM.  
+
+#### Shortlist Committee Member, Chicago Humanities Festival, Chicago, IL  
+Spring 2015 – Present  
+I am part of the young professionals advisory committee for the CHF.  
+
+#### Editor, Open Books, Ltd., Chicago, IL  
+2015 - Present  
+I edit the work of middle school and high school aged students writing fiction.  
+
+<BR>
+
+Contributor, Data4Democracy  
+January 2017 - May 2017  
+I worked with other analysis professionals around the country on projects analyzing Medicare drug data and exploring Chicago lobbying activity.  
+
+Literacy Tutor, Open Books, Ltd., Chicago, IL  
+2015- 2016  
+
+Debate Coach, Amundsen High School and Alcott High School for the Humanities, Chicago, IL   
+2009 - 2011   
+
+Volunteer, Marwen Paintbrush Ball Gala, Chicago, IL  
+2010  
+
+Research Panel Chairperson, McNair Scholars Program, Portland State University, Portland, OR  
+2007  
+Panel Title: “Brave New World: Global Systems and Capitalism”  
+Student Presenters: Matthew Blackmore, Adam Brewer, Signe Lauren Spencer  
+    
+
+<a id="cont"></a>
+
+### Contact
+
+<BR>
+
+#### Email: s.kirmer@gmail.com  
+
+<BR>
+
+#### Skype: s.kirmer  
+
+<BR>
+
+#### [kaggle.com/skirmer](http://www.kaggle.com/skirmer)
+
+
+Tweets {data-width=300}
+-------------------------------------
+
+```{r echo=FALSE, fig.height=500}
+knitr::asis_output(htmltools::htmlPreserve('
+
+<a class="twitter-timeline" href="https://twitter.com/data_stephanie?ref_src=twsrc%5Etfw" data-height=600 data-chrome="nofooter">Tweets by data_stephanie</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+'))
+```
+
