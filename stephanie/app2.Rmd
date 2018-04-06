@@ -167,8 +167,10 @@ Assisted with research on out-of-school time programs across the state under Dr.
 #### Software Packages/Applications   
 
 * RStudio  
-* Anaconda, Spyder, Jupyter Notebooks  
+* Anaconda  
+* Spyder, Jupyter Notebooks  
 * Git  
+* Airflow  
 * MySQL Server, PostgreSQL  
 * Tableau  
 * Qualtrics  
@@ -180,7 +182,7 @@ Assisted with research on out-of-school time programs across the state under Dr.
 * Text mining/natural language processing  
 * Regression modeling  
 * GIS analysis/mapping  
-* Network analysis (igraph)  
+* Network analysis  
 
 #### Other Competency Areas  
 
@@ -253,6 +255,23 @@ Update: Read the interview I did regarding this project (and the other fabulous 
 http://blog.kaggle.com/2017/03/29/predicting-house-prices-playground-competition-winning-kernels
 
 *Key Skills: machine learning, data cleaning*  
+
+<BR>
+
+***
+
+<BR>
+
+#### [Kiva Loan Data Analysis](https://skirmer.shinyapps.io/Kiva_Loans/)  
+
+This is still a work in progress, but I'm planning to complete several components:   
+
+* GIS analysis of loans by country with attention to economic conditions in countries (done)  
+* Data munging of the regional data provided (quality is very poor, but it's a good NLP task)  
+* Exploring modeling potential- if repayment time can be predicted, or 
+anomaly detection if labeling outcomes is not possible  
+
+Come back to check out the latest as I continue working!
 
 <BR>
 
@@ -400,6 +419,28 @@ Past:
 * International Humanist Congress, Noordwijk, Netherlands, 2002. "Cross-Generational Organizing and Activism"  
 
 *I am happy to give public presentations on my areas of expertise, including data science (practice, ethics, gender issues, etc), sociology, and education. Feel free to get in touch if you need a speaker.*
+
+<BR>
+
+***
+
+<BR>
+
+#### Faculty Experience
+
+Adjunct Faculty, Department of Health Sciences, DePaul University  
+Jan 2016 – Present   
+
+I teach undergraduate students pursuing health professions careers content related to research, public health, and sociology of health and medicine.  
+Courses: HLTH201: Introduction to Health Sciences, HLTH202: Health Research Literacy
+
+
+Adjunct Faculty, Department of Sociology, DePaul University  
+Jan 2013 – Apr 2015  
+
+I designed and taught courses, including incorporating extensive multimedia, and effectively using online learning environment as supplement to course meetings.   
+Courses: SOC351: Health Disparities, LSP200: Sophomore Seminar on Multiculturalism in the US: Minority Mental Health in the United States
+
 
 <BR>
 
