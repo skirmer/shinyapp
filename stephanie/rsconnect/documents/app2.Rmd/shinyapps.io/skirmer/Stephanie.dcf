@@ -5,8 +5,8 @@ account: skirmer
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 292432
-bundleId: 1305112
+bundleId: 1307064
 url: https://skirmer.shinyapps.io/Stephanie/
-when: 1522980078.16933
+when: 1523070137.67635
 asMultiple: FALSE
 asStatic: FALSE
